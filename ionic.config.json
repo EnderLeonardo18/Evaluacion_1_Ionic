@@ -1,0 +1,7 @@
+{
+  "name": "bio-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
