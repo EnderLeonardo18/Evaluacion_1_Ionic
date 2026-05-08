@@ -1,0 +1,249 @@
+/* Configuración de variables de tema futurista */
+:host {
+  --neon-blue: #00d2ff;
+  --neon-gold: #ffc400;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenedor principal con límite de ancho para pantallas grandes */
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Barra de herramientas con azul profundo y sombra de elevación */
+ion-toolbar {
+  --background: #003366;
+  --color: white;
+  --border-style: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Título de cabecera: centrado absoluto, sin recortes y estilo dorado */
+ion-title {
+  font-size: 0.85rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  text-align: center;
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: #ffcc00;
+  text-shadow: 1px 1px 0px #8a6d00, 0px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+/* Encabezados de secciones con tipografía deportiva */
+ion-list-header {
+  --color: var(--neon-gold);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+/* Sección de noticia principal: tipografía y espaciado */
+.main-news {
+  margin-bottom: 25px;
+
+  h1 {
+    font-size: 1.1rem !important;
+    font-weight: 850;
+    letter-spacing: 1px;
+    color: var(--neon-gold);
+    text-shadow: 0 0 10px rgba(255, 196, 0, 0.3);
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--ion-color-step-600);
+    margin-bottom: 15px;
+    opacity: 0.9;
+  }
+}
+
+/* Tarjeta principal (Hero) con efecto de cristal y bordes suaves */
+.hero-card {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  margin: 0 !important;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  img {
+    filter: saturate(1.2);
+  }
+
+  ion-card-header {
+    ion-card-title {
+      color: var(--ion-color-dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    ion-card-subtitle {
+      color: var(--neon-blue);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+
+  ion-card-content {
+    color: var(--ion-color-step-700);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    b { color: var(--ion-color-dark); font-weight: 700; }
+  }
+}
+
+/* Tarjeta de audio con controles estilizados y filtros de color */
+ion-card[color="light"] {
+  --background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+
+  ion-item {
+    --background: transparent;
+    --color: var(--ion-color-step-900);
+    ion-icon {
+      color: var(--neon-blue);
+      filter: drop-shadow(0 0 5px var(--neon-blue));
+    }
+    ion-label { font-weight: 600; letter-spacing: 0.5px; }
+  }
+
+  audio {
+    filter: invert(80%) sepia(50%) saturate(1000%) hue-rotate(10deg) brightness(1.1);
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* Galería de imágenes: contenedores con brillo de neón */
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 5px var(--neon-blue);
+  position: relative;
+}
+
+/* Columnas del collage con espaciado interno */
+ion-col {
+  padding: 8px;
+}
+
+/* Imágenes del collage con animación al pasar el cursor */
+.collage-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    transform: scale(1.08);
+    filter: brightness(1.2);
+  }
+}
+
+/* Alturas fijas para mantener la simetría del collage */
+.main-img-container { height: 180px; }
+.trophy-img-container { height: 250px; }
+
+/* Items de noticias/fases finales con miniaturas grandes */
+.blog-item {
+  --background: rgba(255, 255, 255, 0.03);
+  --border-radius: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--neon-blue);
+  }
+
+  ion-thumbnail {
+    --size: 110px;
+    margin-right: 16px;
+    img { border-radius: 12px; object-fit: cover; }
+  }
+
+  ion-label h3 {
+    font-size: 1.2rem !important;
+    color: var(--ion-color-dark);
+    b { color: var(--neon-gold); text-transform: uppercase; display: block; font-size: 0.9rem; }
+  }
+}
+
+/* Panel de fase de grupos con estilo tecnológico */
+.group-card {
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.group-item {
+  --background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  .match-date { font-size: 0.7rem; color: var(--neon-blue); font-weight: 700; text-transform: uppercase; }
+  .match-score { font-size: 1.05rem; color: var(--ion-color-step-950); b { color: var(--ion-color-dark); } }
+}
+
+/* Insignias de resultado con resplandor (G/P) */
+.result-badge {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  font-weight: 800;
+  color: #fff !important;
+
+  &.win { background: linear-gradient(135deg, #2dd36f, #00ff6a); box-shadow: 0 0 15px rgba(45, 211, 111, 0.4); }
+  &.loss { background: linear-gradient(135deg, #eb445a, #ff0022); box-shadow: 0 0 15px rgba(235, 68, 90, 0.4); }
+}
+
+/* Ajustes de diseño para pantallas de escritorio */
+@media (min-width: 992px) {
+  .main-img-container { height: 380px; }
+  .trophy-img-container { height: 550px; }
+
+  ion-card, ion-list-header, .group-card {
+    max-width: 850px;
+    margin: 20px auto !important;
+  }
+}

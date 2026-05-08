@@ -1,0 +1,151 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>WBC 2026 - ¡Venezuela Campeón!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="main-container">
+
+    <!-- SECCIÓN PRINCIPAL: LA FINAL -->
+    <div class="main-news">
+      <ion-text color="primary">
+        <h1 class="ion-text-center ion-no-margin"><b>¡VENEZUELA CAMPEONA DEL MUNDO!</b></h1>
+        <p class="ion-text-center ion-text-uppercase">Crónica de una Gloria Histórica</p>
+      </ion-text>
+
+      <ion-card class="hero-card">
+        <img alt="Celebración Venezuela Campeón" src="assets/img/final-celebracion.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>17 de Marzo | loanDepot park, Miami</ion-card-subtitle>
+          <ion-card-title>Venezuela 3 - 2 Estados Unidos</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Con un hit decisivo de <b>Eugenio Suárez</b> en el noveno inning y una apertura sólida de <b>Eduardo Rodríguez</b>, la selección nacional alcanzó su primera corona mundial. <b>Daniel Palencia</b> selló la victoria ante más de 36,000 espectadores.
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <!-- SECCIÓN MULTIMEDIA PARA EL AUDIO -->
+    <ion-list-header>
+      <ion-label>Narración Histórica de Ernesto Jerez</ion-label>
+    </ion-list-header>
+    <ion-card color="light">
+      <ion-card-content>
+        <ion-item lines="none" color="light">
+          <ion-icon name="mic-outline" slot="start"></ion-icon>
+          <ion-label>Escucha el último out del campeonato</ion-label>
+        </ion-item>
+        <audio controls style="width: 100%; margin-top: 10px; border-radius: 8px;">
+          <source src="assets/audio/ultimo-out.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </ion-card-content>
+    </ion-card>
+
+<!-- COLLAGE DE IMÁGENES CON MARCO FIJO -->
+    <ion-list-header class="ion-padding-top">
+      <ion-label>Momentos Inolvidables</ion-label>
+    </ion-list-header>
+
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <!-- Imagen 1 -->
+        <ion-col size="6">
+          <div class="image-container main-img-container">
+            <img src="assets/img/mvp-maikel-garcia.jpg" class="collage-img" alt="MVP Maikel García" />
+          </div>
+        </ion-col>
+
+        <!-- Imagen 2 -->
+        <ion-col size="6">
+          <div class="image-container main-img-container">
+            <img src="assets/img/eugenio-suarez.webp" class="collage-img" alt="Eugenio Suárez" />
+          </div>
+        </ion-col>
+
+        <!-- Imagen 3 -->
+        <ion-col size="12">
+          <div class="image-container trophy-img-container">
+            <img src="assets/img/trofeo.webp" class="collage-img" alt="El Trofeo" />
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- RONDAS DE ELIMINACIÓN DIRECTA -->
+    <ion-list-header class="ion-padding-top">
+      <ion-label>Fase Final</ion-label>
+    </ion-list-header>
+
+    <ion-item class="blog-item" lines="inset">
+      <ion-thumbnail slot="start">
+        <img alt="Semifinal vs Italia" src="assets/img/venezuela-vs-italia.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3><b>Semifinal:</b> Venezuela 4 - 2 Italia</h3>
+        <p>16 de Marzo: Remontada épica para avanzar a la final.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="blog-item" lines="inset">
+      <ion-thumbnail slot="start">
+        <img alt="Cuartos vs Japón" src="assets/img/venezuela-vs-japon.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3><b>Cuartos:</b> Venezuela 8 - 5 Japón</h3>
+        <p>14 de Marzo: Victoria ante el campeón defensor.</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- FASE DE GRUPOS (GRUPO D) -->
+<ion-list-header class="ion-padding-top">
+  <ion-label>Fase de Grupos - Récord 3-1</ion-label>
+</ion-list-header>
+
+<ion-card class="group-card">
+  <ion-list>
+    <ion-item class="group-item">
+      <ion-label>
+        <p class="match-date">6 de Marzo</p>
+        <h3 class="match-score">🇻🇪 <b>Venezuela 6 - 2 Países Bajos</b> 🇳🇱</h3>
+        <p class="match-desc">Debut con victoria sólida.</p>
+      </ion-label>
+      <ion-badge slot="end" class="result-badge win">G</ion-badge>
+    </ion-item>
+
+    <ion-item class="group-item">
+      <ion-label>
+        <p class="match-date">7 de Marzo</p>
+        <h3 class="match-score">🇮🇱 <b>Israel 3 - 11 Venezuela</b> 🇻🇪</h3>
+        <p class="match-desc">Poder ofensivo en Miami.</p>
+      </ion-label>
+      <ion-badge slot="end" class="result-badge win">G</ion-badge>
+    </ion-item>
+
+    <ion-item class="group-item">
+      <ion-label>
+        <p class="match-date">9 de Marzo</p>
+        <h3 class="match-score">🇻🇪 <b>Venezuela 4 - 0 Nicaragua</b> 🇳🇮</h3>
+        <p class="match-desc">Blanqueo para asegurar clasificación.</p>
+      </ion-label>
+      <ion-badge slot="end" class="result-badge win">G</ion-badge>
+    </ion-item>
+
+    <ion-item lines="none" class="group-item">
+      <ion-label>
+        <p class="match-date">11 de Marzo</p>
+        <h3 class="match-score">🇩🇴 <b>Dom. 7 - 5 Venezuela</b> 🇻🇪</h3>
+        <p class="match-desc">Duelo de titanes en el cierre de grupo.</p>
+      </ion-label>
+      <ion-badge slot="end" class="result-badge loss">P</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-card>
+
+  </div>
+</ion-content>

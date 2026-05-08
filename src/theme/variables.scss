@@ -1,2 +1,23 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+
+
+:root {
+  /* Rojo Vinotinto/Carmesí (#a93134) */
+  --ion-color-primary: #a93134;
+  --ion-color-primary-rgb: 169, 49, 52;
+
+  /* Fondo: Azul Noche (Representando el uniforme de visitante) */
+  --ion-background-color: #052A3D;
+
+  /* Items del menú: Gris Carbón (Elegancia) */
+  --ion-item-background: #4a444d;
+
+  --ion-text-color: #ffffff;
+}
+
+/* El Header con un degradado que recuerde a la bandera o al estadio */
+ion-toolbar {
+  --background: linear-gradient(to right, #a93134 0%, #117192 100%);
+  --color: white;
+}

@@ -1,0 +1,101 @@
+/* VARIABLES Y CONFIGURACIÓN BASE */
+:host {
+  --neon-blue: #00d2ff;
+  --neon-gold: #ffc400;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* HEADER Y TOOLBAR (Estilo unificado) */
+ion-toolbar {
+  --background: #003366; /* Azul marino sólido profesional */
+  --color: white;
+  --border-style: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  ion-title {
+    font-size: 0.9rem;
+    font-weight: 850;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffcc00; /* Dorado neón */
+    text-shadow: 1px 1px 0px #8a6d00, 0px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+}
+
+ion-menu-button {
+  --color: white;
+}
+
+/* CABECERA DEL PERFIL (Avatar y Nombre) */
+.profile-header {
+  padding: 30px 0 20px;
+  text-align: center;
+
+  ion-avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    border: 3px solid var(--neon-blue);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+  }
+
+  h1 {
+    font-weight: 800;
+    color: var(--ion-color-dark);
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+}
+
+/* LISTA CON EFECTO GLASSMORPHISM */
+ion-list {
+  background: transparent !important;
+  padding: 0 10px;
+
+  ion-item {
+    --background: var(--glass-bg);
+    --border-radius: 15px;
+    --border-color: var(--glass-border);
+    --padding-start: 15px;
+    margin-bottom: 12px;
+
+    /* Efecto de desenfoque de cristal */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--neon-blue);
+    }
+
+    /* Iconos laterales */
+    ion-icon {
+      color: var(--neon-gold);
+      font-size: 1.6rem;
+      filter: drop-shadow(0 0 5px rgba(255, 196, 0, 0.3));
+    }
+
+    /* Estilizado de etiquetas internas */
+    h2 {
+      color: var(--neon-blue);
+      font-size: 0.75rem !important;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      color: var(--ion-color-dark);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+  }
+}
