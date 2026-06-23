@@ -51,6 +51,75 @@
   margin-bottom: 30px;
 }
 
+
+/* ==========================================================================
+   NUEVOS ESTILOS PARA LA SECCIÓN DE REGISTROS LOCALES
+   ========================================================================== */
+
+.comentarios-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.comentarios-title {
+  color: var(--neon-blue);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.comentarios-scroll {
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 4px;
+
+  /* Estilo moderno para el scroll */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+}
+
+.comentario-item {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  border-left: 3px solid var(--neon-gold);
+  backdrop-filter: blur(5px);
+}
+
+.comentario-user {
+  margin: 0;
+  font-weight: 700;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.comentario-email {
+  font-weight: 400;
+  color: #b3b3b3;
+  font-size: 0.75rem;
+}
+
+.comentario-text {
+  margin: 4px 0 0 0;
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+
 /* Botón estilizado */
 .github-button {
   --background: #24292e; /* Color oficial de GitHub */
@@ -80,4 +149,185 @@ ion-toolbar {
     color: #ffcc00;
     text-shadow: 1px 1px 0px #8a6d00;
   }
+}
+
+
+
+
+/* ==========================================================================
+   Ajuste para la cabecera interactiva del listado
+   ========================================================================== */
+.comentarios-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS PARA EL TOAST
+   ========================================================================== */
+.toast-personalizado::part(message) {
+  color: #ffffff;          /* 👈 Aquí cambias el color de las letras (ej: Blanco) */
+  font-size: 0.95rem;      /* Tamaño de la fuente */
+  font-weight: 700;        /* Letras más gruesas y legibles */
+  letter-spacing: 0.5px;   /* Espaciado moderno entre caracteres */
+}
+
+/* OPCIONAL: Si necesitas cambiar el color del botón "X" o de cierre interno */
+.toast-personalizado::part(button) {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+
+/* ==========================================================================
+   ESTILOS PARA ELEMENTOS DEL FORMULARIO Y LISTADO (movidos desde inline)
+   ========================================================================== */
+
+/* --- Formulario --- */
+.contact-form {
+  margin-bottom: 20px;
+}
+
+/* Items del formulario */
+.custom-item {
+  --background: transparent;
+  --color: white;
+  margin-bottom: 12px;
+}
+
+/* Último item (textarea) con margen reducido */
+.custom-item-last {
+  margin-bottom: 4px;
+}
+
+/* Mensaje de validación */
+.validation-message {
+  color: #ffc400;
+  font-size: 0.8rem;
+  text-align: left;
+  padding-left: 8px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Botón de envío */
+.submit-button {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* --- Toast --- */
+ion-toast.toast-personalizado {
+  --border-radius: 12px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+/* --- Cabecera de la lista de comentarios --- */
+.comentarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 2px;
+}
+
+/* Título dentro del header (sin bordes ni márgenes extra) */
+.header-title {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+/* Botón de eliminar (sin margen) */
+.delete-button {
+  margin: 0;
+}
+
+/* --- Checkbox "Seleccionar todos" --- */
+.select-all-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-left: 2px;
+}
+
+.select-all-checkbox {
+  --size: 16px;
+  --checkbox-background-checked: var(--neon-gold);
+}
+
+.select-all-label {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* --- Barra de búsqueda --- */
+.custom-searchbar {
+  --background: rgba(255, 255, 255, 0.08);
+  --color: white;
+  --placeholder-color: #aaa;
+  --icon-color: #aaa;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+/* --- Cada ítem de comentario --- */
+.comentario-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  border-left: 3px solid var(--neon-gold);
+  backdrop-filter: blur(5px);
+}
+
+/* Checkbox dentro del ítem */
+.item-checkbox {
+  --size: 18px;
+  --checkbox-background-checked: var(--neon-gold);
+  --border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Contenedor de los detalles del comentario */
+.comentario-details {
+  flex: 1;
+  text-align: left;
+}
+
+/* --- Mensaje cuando no hay resultados de búsqueda --- */
+.no-results {
+  color: #aaa;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* --- Contenedor cuando no hay comentarios guardados --- */
+.no-comentarios-container {
+  margin-top: 25px;
+  padding: 15px;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.no-comentarios-text {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* --- Ajustes de espaciado para elementos que estaban inline --- */
+/* (Estas clases se usan para espacios vacíos o márgenes adicionales) */
+.spacer {
+  margin-bottom: 16px;
 }
